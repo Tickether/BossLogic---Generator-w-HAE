@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@hashlips-lab/art-engine": "^2.0.0-alpha5"
+    "@hashlips-lab/art-engine": "^2.0.0-alpha5",
+    "sharp": "^0.32.4"
   }
 }
