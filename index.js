@@ -21,6 +21,7 @@ const BossAE = new ArtEngine({
         deaf: new inputs.ImageLayersInput({
             assetsBasePath: `${BASE_PATH}/data_img/DEAF`,
         }),
+        
         //character 4
         draken: new inputs.ImageLayersInput({
             assetsBasePath: `${BASE_PATH}/data_img/DRAKEN`,
@@ -53,6 +54,7 @@ const BossAE = new ArtEngine({
         lucied: new inputs.ImageLayersInput({
             assetsBasePath: `${BASE_PATH}/data_img/LUCIED`,
         }),
+        
         //character 12
         mel: new inputs.ImageLayersInput({
             assetsBasePath: `${BASE_PATH}/data_img/MEL`,
@@ -61,102 +63,97 @@ const BossAE = new ArtEngine({
         sindrome: new inputs.ImageLayersInput({
             assetsBasePath: `${BASE_PATH}/data_img/SINDROME`,
         }),
-        
         //character 14
         zen: new inputs.ImageLayersInput({
             assetsBasePath: `${BASE_PATH}/data_img/ZEN`,
         })
-        
     },
 
     generators: [
-        //character 1
+        //character 1 //710
         new generators.ImageLayersAttributesGenerator({
             dataSet:'aimee',
             startIndex: 1,
-            endIndex: 10,
+            endIndex: 710,
         }),
-        
-        //character 2
+        //character 2 //710
         new generators.ImageLayersAttributesGenerator({
             dataSet:'cypher',
-            startIndex: 11,
-            endIndex: 20,
+            startIndex: 711,
+            endIndex: 1420,
         }),
-        //character 3
+        //character 3 //710
         new generators.ImageLayersAttributesGenerator({
             dataSet:'deaf',
-            startIndex: 21,
-            endIndex: 30,
+            startIndex: 1421,
+            endIndex: 2130,
         }),
-        //character 4
+        //character 4 //710
         new generators.ImageLayersAttributesGenerator({
             dataSet:'draken',
-            startIndex: 31,
-            endIndex: 40,
+            startIndex: 2131,
+            endIndex: 2840,
         }),
-        //character 5
+        //character 5 //710
         new generators.ImageLayersAttributesGenerator({
             dataSet:'false',
-            startIndex: 41,
-            endIndex: 50,
+            startIndex: 2841,
+            endIndex: 3550,
         }),
-        //character 6
+        //character 6 //710
         new generators.ImageLayersAttributesGenerator({
             dataSet:'gospell',
-            startIndex: 51,
-            endIndex: 60,
+            startIndex: 3551,
+            endIndex: 4260,
         }),
-        //character 7
+        //character 7 //710
         new generators.ImageLayersAttributesGenerator({
             dataSet:'hush',
-            startIndex: 61,
-            endIndex: 70,
+            startIndex: 4261,
+            endIndex: 4970,
         }),
-        //character 8
+        //character 8 //710
         new generators.ImageLayersAttributesGenerator({
             dataSet:'immortal',
-            startIndex: 71,
-            endIndex: 80,
+            startIndex: 4971,
+            endIndex: 5680,
         }),
-        //character 9
+        //character 9 //710
         new generators.ImageLayersAttributesGenerator({
             dataSet:'ingrim',
-            startIndex: 81,
-            endIndex: 90,
+            startIndex: 5681,
+            endIndex: 6390,
         }),
-        //character 10
+        //character 10 //700
         new generators.ImageLayersAttributesGenerator({
             dataSet:'lgx',
-            startIndex: 91,
-            endIndex: 100,
+            startIndex: 6391,
+            endIndex: 7090,
         }),
-        //character 11
+        //character 11 //710
         new generators.ImageLayersAttributesGenerator({
             dataSet:'lucied',
-            startIndex: 101,
-            endIndex: 110,
+            startIndex: 7091,
+            endIndex: 7800,
         }),
-        //character 12
+        //character 12 //710
         new generators.ImageLayersAttributesGenerator({
             dataSet:'mel',
-            startIndex: 111,
-            endIndex: 120,
+            startIndex: 7801,
+            endIndex: 8510,
         }),
-        //character 13
+        //character 13 //710
         new generators.ImageLayersAttributesGenerator({
             dataSet:'sindrome',
-            startIndex: 121,
-            endIndex: 130,
+            startIndex: 8511,
+            endIndex: 9220,
         }),
-        
-        //character 14
+        //character 14/ /710
         new generators.ImageLayersAttributesGenerator({
             dataSet:'zen',
-            startIndex: 131,
-            endIndex: 140,
+            startIndex: 9221,
+            endIndex: 9930,
         }),
-        
     ],
 
     
@@ -173,7 +170,10 @@ const BossAE = new ArtEngine({
 
     
     exporters: [ 
-        new exporters.ImagesExporter()
+        new exporters.ImagesExporter(),
+        new exporters.Erc721MetadataExporter({
+            imageUriPrefix: `ipfs://CID/`
+        })
     ],
 
 
