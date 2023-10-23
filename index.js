@@ -5,7 +5,7 @@ const BASE_PATH = __dirname
 const BossAE = new ArtEngine({
     cachePath: `${BASE_PATH}/cache`,
     outputPath: `${BASE_PATH}/output`,
-    useCache: true,
+    useCache: false,
 
     
     inputs: {
@@ -66,7 +66,27 @@ const BossAE = new ArtEngine({
         //character 14
         zen: new inputs.ImageLayersInput({
             assetsBasePath: `${BASE_PATH}/data_img/ZEN`,
-        })
+        }),
+        //fluro
+        fluro: new inputs.ImageLayersInput({
+            assetsBasePath: `${BASE_PATH}/data_img/LEG`,
+        }),
+        //golden
+        golden: new inputs.ImageLayersInput({
+            assetsBasePath: `${BASE_PATH}/data_img/LEG-I`,
+        }),
+        //ignites
+        ignites: new inputs.ImageLayersInput({
+            assetsBasePath: `${BASE_PATH}/data_img/LEG-II`,
+        }),
+        //shadows
+        shadows: new inputs.ImageLayersInput({
+            assetsBasePath: `${BASE_PATH}/data_img/LEG-III`,
+        }),
+        //soulless
+        soulless: new inputs.ImageLayersInput({
+            assetsBasePath: `${BASE_PATH}/data_img/LEG-IV`,
+        }),
     },
 
     generators: [
@@ -153,6 +173,31 @@ const BossAE = new ArtEngine({
             dataSet:'zen',
             startIndex: 9221,
             endIndex: 9930,
+        }),
+        new generators.ImageLayersAttributesGenerator({
+            dataSet:'fluro',
+            startIndex: 9931,
+            endIndex: 9944,
+        }),
+        new generators.ImageLayersAttributesGenerator({
+            dataSet:'golden',
+            startIndex: 9945,
+            endIndex: 9958,
+        }),
+        new generators.ImageLayersAttributesGenerator({
+            dataSet:'ignites',
+            startIndex: 9959,
+            endIndex: 9972,
+        }),
+        new generators.ImageLayersAttributesGenerator({
+            dataSet:'shadows',
+            startIndex: 9973,
+            endIndex: 9986,
+        }),
+        new generators.ImageLayersAttributesGenerator({
+            dataSet:'soulless',
+            startIndex: 9987,
+            endIndex: 10000,
         }),
     ],
 
