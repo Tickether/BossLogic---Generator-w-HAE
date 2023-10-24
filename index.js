@@ -5,7 +5,7 @@ const BASE_PATH = __dirname
 const BossAE = new ArtEngine({
     cachePath: `${BASE_PATH}/cache`,
     outputPath: `${BASE_PATH}/output`,
-    useCache: false,
+    useCache: true,
 
     
     inputs: {
