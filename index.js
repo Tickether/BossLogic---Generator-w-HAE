@@ -96,6 +96,7 @@ const BossAE = new ArtEngine({
             startIndex: 1,
             endIndex: 710,
         }),
+        /*
         //character 2 //710
         new generators.ImageLayersAttributesGenerator({
             dataSet:'cypher',
@@ -199,6 +200,7 @@ const BossAE = new ArtEngine({
             startIndex: 9987,
             endIndex: 10000,
         }),
+        */
     ],
 
     

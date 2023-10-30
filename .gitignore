@@ -43,7 +43,7 @@ node_modules/
 New_Img_Layers(re-Layer)_based/
 jspm_packages/
 data_img/
-
+output/
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
 
